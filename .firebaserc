@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-sprint1-58294": {
+      "hosting": {
+        "angular-sprint1": [
+          "angular-sprint1-58294"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-sprint1-58294"
+  }
+}

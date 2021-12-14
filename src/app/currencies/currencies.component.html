@@ -1,0 +1,18 @@
+<div id="currencies-component">
+    <div id="dollar-input-container">
+        <input type="number" [(ngModel)]="USDAmount" step="0.01"/>
+        <p style="margin-left: '8px';">dollars is equal to...</p>
+    </div>
+    <table>
+        <tr>
+            <th>Code</th>
+            <th>Currency Name</th>
+            <th>Value</th>
+        </tr>
+        <tr *ngFor="let currency of currencies">
+            <td>{{currency.id}}</td>
+            <td>{{currency.currencyName}}</td>
+            <td>{{(currency.value * USDAmount).toFixed(4)}}</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,25 @@
+<div id="wallet-selector-container">
+    <p>Select wallet: </p>
+    <select id="wallet-selector" [(ngModel)]="selectedWalletIndex" (change)="updateSelectedWallet()">
+        <option *ngFor="let wallet of wallets; let i = index" value="{{i}}" name="wallet-option" ngDefaultControl>{{wallet.firstName + ' ' + wallet.lastName}}</option>
+    </select>
+</div>
+<br>
+<div id="wallet-container">
+    <div id="wallet-img-container">
+        <img id="wallet-img" src="../../assets/img/wallet.png">
+        <div id="name-container">
+            <p id="first-name">{{selectedWallet?.firstName}}</p>
+            <p id="last-name">{{selectedWallet?.lastName}}</p>
+        </div>
+    </div>
+    <div id="asset-information">
+        <p id="assets-title">Your Assets: </p>
+        <div id="assets-container">
+            <p class="asset-text" *ngFor="let asset of selectedWallet?.assets">{{asset?.code}}: {{asset?.value}}</p> 
+        </div>
+    </div>
+</div>
+
+
+
